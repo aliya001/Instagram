@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>instagram</title>
+    <style>
+        body{
+            margin: 0 ;
+            color: black;
+        }
+        h1{
+            margin: 0 ;
+        }
+        .bg{
+            background: url('12345.jpg');
+            background-repeat: no-repeat;
+             background-position: bottom;
+              background-size: cover ;
+            height: 100vh;
+            text-align: center  ;
+        }
+        .krai{
+            background-color: white;
+            border: 1px solid black;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+           text-align: left;
+            width: 600px;
+            height: 80px;
+        }
+        .ava{
+            height: 50px;
+            width: 50px;
+           margin-left: 10px;
+        }
+        .like{
+            height: 30px;
+            width: 30px;
+           margin-left: 10px;
+        }
+
+    </style>
+</head>
+<body class="bg" >
+<center>
+    <h1>INSTAGRAM</h1>
+    <div class="krai ">
+        <img src="ava.jpg"  class="ava" >
+        <h2>Aliya123</h2>
+    </div>
+    <img src="artist.jpg" height="600" width="600" >
+    <div class="krai">
+        <img  class="like" src="black.png" onclick="more()" id="art">
+        <h2 id="name">100 </h2>
+    </div>
+</center>
+</body>
+<script>
+    let i=0
+    const odin=1
+    function more() {
+        i=i+odin
+        if (i>1) {
+            i=0
+        }
+        if (i===0) {
+            document.getElementById('art').src="black.png"
+            document.getElementById('name').innerHTML = "99"
+        }
+         if (i===1) {
+            document.getElementById('art').src="red.png"
+              document.getElementById('name').innerHTML = "100"
+        }
+    }
+
+</script>
+</html>
